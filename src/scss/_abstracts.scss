@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+// COLOR
+$cl-nutmeg: hsl(14, 45%, 36%);
+$cl-dark-raspberry: hsl(332, 51%, 32%);
+$cl-white: hsl(0, 0%, 100%);
+$cl-rose-white: hsl(330, 100%, 98%);
+$cl-eggshell: hsl(30, 54%, 90%);
+$cl-light-grey: hsl(30, 18%, 87%);
+$cl-wenge-brown: hsl(30, 10%, 34%);
+$cl-dark-charcoal: hsl(24, 5%, 18%);
+
+// FONT-FAMILY
+$ff-young-serif: "Young Serif", sans-serif;
+$ff-outfir: "Outfit", sans-serif;
+
+// FONT-WEIGHT
+$fw-tiny: 400;
+$fw-medium: 600;
+$fw-large: 700;
+
+// FUNCTION
+@function toRem($size) {
+	$remSize: calc($size / 16px);
+	@return #{$remSize}rem;
+}
