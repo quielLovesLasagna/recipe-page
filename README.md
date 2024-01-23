@@ -22,8 +22,8 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [https://github.com/quielLovesLasagna/recipe-page](https://github.com/quielLovesLasagna/recipe-page)
+- Live Site URL: [https://quiel-recipe-page.netlify.app/](https://quiel-recipe-page.netlify.app/)
 
 ## My process
 
