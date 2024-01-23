@@ -1,0 +1,162 @@
+@use "./abstracts" as abs;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: abs.$cl-eggshell;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: abs.$ff-outfit;
+	color: abs.$cl-wenge-brown;
+}
+
+img,
+svg {
+	max-width: 100%;
+	display: block;
+}
+
+main {
+	padding: abs.toRem(70px) 0;
+}
+
+.recipe {
+	background-color: abs.$cl-white;
+	padding: abs.toRem(35px);
+	border-radius: abs.toRem(20px);
+	max-width: abs.toRem(730px);
+
+	&__image {
+		border-radius: abs.toRem(15px);
+		margin-bottom: abs.toRem(30px);
+	}
+
+	&__name {
+		font-family: abs.$ff-young-serif;
+		font-size: abs.toRem(40px);
+		color: abs.$cl-dark-charcoal;
+		margin-bottom: abs.toRem(15px);
+		font-weight: abs.$fw-tiny;
+	}
+
+	&__description {
+		margin-bottom: abs.toRem(30px);
+	}
+
+	&__prep-container {
+		background-color: abs.$cl-rose-white;
+		padding: abs.toRem(25px);
+		border-radius: abs.toRem(15px);
+		margin-bottom: abs.toRem(30px);
+	}
+
+	&__prep-heading {
+		font-size: abs.toRem(20px);
+		color: abs.$cl-dark-raspberry;
+		margin-bottom: abs.toRem(15px);
+	}
+
+	&__prep {
+		padding-inline: abs.toRem(24px);
+		display: grid;
+		gap: abs.toRem(10px);
+	}
+
+	&__prep-item {
+		padding-left: abs.toRem(15px);
+	}
+
+	&__prep-item::marker {
+		font-size: abs.toRem(13px);
+		color: abs.$cl-dark-raspberry;
+	}
+
+	&__ingredients-heading,
+	&__instructions-heading,
+	&__nutrition-heading {
+		color: abs.$cl-nutmeg;
+		font-family: abs.$ff-young-serif;
+		font-weight: abs.$fw-tiny;
+		font-size: abs.toRem(28px);
+		margin-bottom: abs.toRem(15px);
+	}
+
+	&__ingredients-container,
+	&__instructions-container {
+		padding-bottom: abs.toRem(30px);
+		margin-bottom: abs.toRem(30px);
+		border-bottom: 1px solid abs.$cl-light-grey;
+	}
+
+	&__ingredients,
+	&__instructions {
+		padding-inline: abs.toRem(20px);
+		display: grid;
+		gap: abs.toRem(10px);
+	}
+
+	&__ingredient,
+	&__instruction {
+		padding-left: abs.toRem(15px);
+	}
+
+	&__ingredient::marker {
+		font-size: abs.toRem(13px);
+		color: abs.$cl-nutmeg;
+	}
+
+	&__instruction::marker {
+		font-weight: abs.$fw-large;
+		font-family: inherit;
+		color: abs.$cl-nutmeg;
+	}
+
+	&__nutrition-table {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+		&-caption {
+			grid-column: 1 / -1;
+			text-align: left;
+			margin-bottom: abs.toRem(20px);
+		}
+
+		tr {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		thead tr th {
+			padding-left: abs.toRem(30px);
+			font-weight: abs.$fw-tiny;
+			width: 100%;
+			text-align: left;
+			padding-block: abs.toRem(10px);
+
+			&:not(:last-child) {
+				border-bottom: 1px solid abs.$cl-light-grey;
+			}
+		}
+
+		tbody tr td {
+			width: 100%;
+			color: abs.$cl-nutmeg;
+			font-weight: abs.$fw-large;
+			padding-block: abs.toRem(10px);
+
+			&:not(:last-child) {
+				border-bottom: 1px solid abs.$cl-light-grey;
+			}
+		}
+	}
+}
